@@ -8,15 +8,15 @@
 - [Resultado](#resultado)
 
 ## Descripción
-En este proyecto estamos creado una aplicacion web LAMP en 2 niveles, una de las maquinas se le instalará Apache2 y en la otra el Mysql-server.
-La máquina del Apache se encargará de gestionar las particiones web, mientras que el del Mysql se encargará de gestionar la base de datos.
+En este proyecto estamos creando una aplicación web LAMP en dos niveles. Una de las máquinas tendrá instalado Apache2 y la otra tendrá instalado MySQL Server.  
+La máquina de Apache se encargará de gestionar las particiones web, mientras que la de MySQL se encargará de gestionar la base de datos.  
 
 ## Vagrantfile
 ![image](https://github.com/user-attachments/assets/083ae84c-4b71-4c12-ad26-88f59cbf59de)
 
-Aquí tenemos la creación de las 2 máquinas vituales:  
-La del Apache tiene una red pública y otra privada (192.168.1.1), tambien tiene un reenvio de puertos del 80 al 8080 y por último tiene el aprovisionamiento.  
-La del Mysql tiene una sola red privada (192.168.1.2) y cuenta tambien con el aprovisionamineto.  
+Aquí tenemos la creación de las dos máquinas virtuales:  
+La del Apache tiene una red pública y otra privada (192.168.1.1), también tiene un reenvío de puertos del 80 al 8080 y, por último, tiene el aprovisionamiento.  
+La de MySQL tiene una sola red privada (192.168.1.2) y cuenta también con el aprovisionamiento.
 
 ## Apache_prov
 Explicaremos que hace cada comando parte por parte.
@@ -66,19 +66,19 @@ Explicaremos que hace cada comando parte por parte.
 ![image](https://github.com/user-attachments/assets/87d7ca58-ea86-4fc3-92f2-5c61f0350861)
 
 **Sudo su:** Inicia como el root  
-**Mysql -u root < /home/vagrant/iaw-practica-lamp/db/database.sql:** Mete ka base de datos que se ha descargado en el mysql.  
-**mMysql -u root <<EOF** Ejecutará los siguientes comandos dentro de mysql.  
+**Mysql -u root < /home/vagrant/iaw-practica-lamp/db/database.sql:** Mete la base de datos que se ha descargado en el MySQL.  
+**mMysql -u root <<EOF** Ejecutará los siguientes comandos dentro de MySQL.  
 **CREATE USER 'kilian'@'192.168.1.1' IDENTIFIED BY '1234';**  
 ***GRANT ALL PRIVILEGES ON lamp_db.* TO 'kilian'@'192.168.1.1';**  
 **FLUSH PRIVILEGES;**
 **EOF**  
 
 ## Resultado
-Una vez levantamos todas las máquinas (vagrant up --provision), ponemos en el buscador localhost:8080 y nos saltrá lo siguiente.
+Una vez levantamos todas las máquinas (vagrant up --provision), ponemos en el buscador localhost:8080 y nos saldrá lo siguiente.
 
 ![image](https://github.com/user-attachments/assets/35000ad0-be05-44f7-aa1d-1eb0816ca572)
 
-Ya podemos añadir todos los usuarios dentro de la base de datos, y en el Mysql se ve así.
+Ya podemos añadir todos los usuarios dentro de la base de datos, y en el MySQL se ve así.
 
 ![image](https://github.com/user-attachments/assets/da40331b-9c45-4d1a-bfed-a0598a076fb0)
 
