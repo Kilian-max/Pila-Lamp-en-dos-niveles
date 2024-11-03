@@ -3,8 +3,9 @@
 ## Tabla de Contenidos
 - [Descripción](#descripción)
 - [Vagrantfile](#vagrantfile)
-- [Apache_prov](#apache)
-- [Mysql_prov](#mysql)
+- [Apache_prov](#apache_prov)
+- [Mysql_prov](#mysql_prov)
+- [Resultado](#resultado)
 
 ## Descripción
 En este proyecto estamos creado una aplicacion web LAMP en 2 niveles, una de las maquinas se le instalará Apache2 y en la otra el Mysql-server.
@@ -72,4 +73,12 @@ Explicaremos que hace cada comando parte por parte.
 **FLUSH PRIVILEGES;**
 **EOF**  
 
+## Resultado
+Una vez levantamos todas las máquinas (vagrant up --provision), ponemos en el buscador localhost:8080 y nos saltrá lo siguiente.
+
+![image](https://github.com/user-attachments/assets/35000ad0-be05-44f7-aa1d-1eb0816ca572)
+
+Ya podemos añadir todos los usuarios dentro de la base de datos, y en el Mysql se ve así.
+
+![image](https://github.com/user-attachments/assets/da40331b-9c45-4d1a-bfed-a0598a076fb0)
 
