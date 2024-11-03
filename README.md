@@ -82,3 +82,7 @@ Ya podemos añadir todos los usuarios dentro de la base de datos, y en el Mysql 
 
 ![image](https://github.com/user-attachments/assets/da40331b-9c45-4d1a-bfed-a0598a076fb0)
 
+Y así terminariamos la práctica de LAMP en 2 niveles.
+
+## Autores
+- **Kilian Gimenez** - [GitHub](https://github.com/Kilian-max) - Creador y jefe del proyecto.
